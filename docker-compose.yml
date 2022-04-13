@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  prediction:
+    build: .
+    ports:
+      - "8000:5000"
+    volumes:
+      - type: bind
+        source: ./
+        target: /opt/ml
